@@ -25,9 +25,10 @@ function goldbach(){
             +"与"+arr[j]+"的和"+'</div>'
     }
     }
-
+    goldbach.innerHTML = Str
 }
-    goldbach.innerHTML = str
+
+
 
     
 

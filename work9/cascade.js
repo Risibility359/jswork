@@ -83,7 +83,7 @@ var collegeSelect = document.getElementById('collegeSelect')
 createOption(collegeSelect,colleges)
 var majorSelect = document.getElementById('majorSelect')
 collegeSelect.onchange = function(){
-    majorSelect.option.length = 0
+    majorSelect.option.length=0
     createOption(majorSelect,majors[collegeSelect.value])
     if(majorSelect.value >=0){
        majorSelect.onchange()
@@ -96,3 +96,4 @@ majorSelect.onchange = function(){
     classSelect.options.length = 0
 createOption(classSelect,classes[collegeSelect.value][majorSelect])
 }
+ 

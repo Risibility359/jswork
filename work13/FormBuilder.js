@@ -4,19 +4,19 @@
   };
   FormBuilder.prototype.create = function() {
     var html = '';
-    for (var k in this.data){
+    for (var k in this.data) {
       var item = {tag: '', text: '',attr: {}, option:null};
-      for (var n in this.data[k]){
+      for (var n in this.data[k]) {
         item[n] = this.data[k][n];
       }
-      html +=FormBuilder.toHTML(item);
+      html += builder.toHTML(item);
     }
     return '<table>' + html + '</table>';
   };
   var builder = {
-    toHTML:function(obj) {
+    toHTML: function(obj) {
       var html = this.item[obj.tag](this.attr(obj.attr), obj.option);
-      return '<td><th>' + obj.text + ' </th></td>' + html + '</td></tr>';
+      return '<tr><th>' + obj.text + '</th><td>' + html + '</td></tr>';
     },
     attr:function(attr) {
       var html = '';
@@ -26,7 +26,7 @@
       return html;    
     },
     item:{
-      input: function(attr,option) {
+      input: function(attr, option) {
         var html = '';
         if (option === null) {
            html += '<input ' + attr + '>';

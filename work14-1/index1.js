@@ -24,7 +24,7 @@ var lamp = {
     },
    };
    var count = {
-       obj:document.getAnimations('count'),
+       obj:document.getElementById('count'),
        chang:function(num) {
            this.obj.innerHTML = ( num < 10)? ('0' + num):num;
        }
